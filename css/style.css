@@ -1,0 +1,51 @@
+:root{
+    --cor-botao:rgb(143, 200, 238);
+}
+*{margin: 0;
+font-size: 16px;
+}
+.header{
+    background-color: var(--cor-botao);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.header__title{
+    color: #ffff;
+    padding: 10px;
+    font-size: 24px;
+}
+.guestTableTitle{
+    font-size: 24px;
+    text-align: center;
+}
+.guestTable{
+    width: 60%;
+    padding: 8px;
+    margin: 8px auto;
+    border: 1px solid black;
+    border-radius: 24px;
+    background-color: var(--cor-botao);
+}
+.guestTable__name,.guestTable__priority{
+    display: inline-block;
+    width: 40%;
+    text-align: center;
+    color: #ffff;
+    font-weight: 800;
+}
+.addNewGuest{
+    width: 60%;
+    padding: 8px;
+    margin: 8px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.addNewGuest__name,.addNewGuest__priority{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
