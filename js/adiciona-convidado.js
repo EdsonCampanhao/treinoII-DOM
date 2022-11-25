@@ -15,6 +15,7 @@ buttonAddGuest.addEventListener('click', (event) => {
     newGuestPriority = document.getElementById('priority').value;
 
     addData(newGuest, newGuestPriority)
+    document.querySelector('.addNewGuest').reset()
 
 })
 function createHtmlStructure() {
