@@ -10,47 +10,47 @@
 </head>
 
 <body>
-    <header class="header">
 
-        <h1 class="header__title"> Exercicio de manipulação de DOM e elementos de uma página dinâmica</h1>
-
-    </header>
     <main class="container">
 
-        <h1 class="guestTableTitle"> Lista de casamento </h1>
-
-        <div class="guestTable">
 
 
-            <div class="guestTable__row">
+        <form action="" class="addNewGuest">
+            <h1 class="guestListTitle"> Lista de casamento </h1>
+            <img src="./img/check list-1.1s-200px.svg" alt="" class="icon">
+            <section class="guestList__data">
+                <div class="addNewGuest__name">
 
-                <p class="guestTable__name">Nome</p>
+                    <label for="name" class="addNewGuest__name-label"> Nome</label>
 
-                <p class="guestTable__priority">Prioridade</p>
+                    <input type="text" class="addNewGuest__name-fild" id="name" name="name">
+
+                </div>
+
+                <div class="addNewGuest__priority">
+                    <label for="priority" class="addNewGuest__priority-label"> Prioridade</label>
+
+                    <input type="text" class="addNewGuest__priority-fild" id="priority" name="priority">
+                </div>
+
+                <button class="addNewGuest__button"> Adicionar convidado</button>
+            </section>
+        </form>
+
+
+        <div class="guestList deactivated">
+
+
+            <div class="guestList__row">
+
+                <p class="guestList__name">Nome</p>
+
+                <p class="guestList__priority">Prioridade</p>
 
             </div>
 
         </div>
 
-        <form action="" class="addNewGuest">
-
-            <div class="addNewGuest__name">
-
-                <label for="name" class="addNewGuest__name-label"> Nome</label>
-
-                <input type="text" class="addNewGuest__name-fild" id="name" name="name">
-
-            </div>
-
-            <div class="addNewGuest__priority">
-                <label for="priority" class="addNewGuest__priority-label"> Prioridade</label>
-
-                <input type="text" class="addNewGuest__priority-fild" id="priority" name="priority">
-            </div>
-
-            <button class="addNewGuest__button"> Adicionar convidado</button>
-
-        </form>
 
 
 

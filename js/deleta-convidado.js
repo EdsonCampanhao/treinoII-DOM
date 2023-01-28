@@ -1,7 +1,7 @@
-var guestTable = document.querySelector('.guestTable');
+var guestList = document.querySelector('.guestList');
 var guest= document.querySelectorAll('.guest')
 
-guestTable.addEventListener('dblclick',(event)=>{
+guestList.addEventListener('dblclick',(event)=>{
 
     event.target.parentElement.remove()
     

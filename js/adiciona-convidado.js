@@ -1,15 +1,18 @@
-var guestTable = document.querySelector('.guestTable');
+var guestList = document.querySelector('.guestList');
 var buttonAddGuest = document.querySelector('.addNewGuest__button')
-var listName = document.querySelectorAll('.guestTable__name')
-var listPriority = document.querySelectorAll('.guestTable__priority')
+var listName = document.querySelectorAll('.guestList__name')
+var listPriority = document.querySelectorAll('.guestList__priority')
 
 buttonAddGuest.addEventListener('click', (event) => {
-    event.preventDefault()
+    event.preventDefault();
+    if(guestList.classList.value.includes('deactivated')){
+        guestList.classList.add('activated')
+    }
 
     createHtmlStructure();
 
-    listName = document.querySelectorAll('.guestTable__name');
-    listPriority = document.querySelectorAll('.guestTable__priority');
+    listName = document.querySelectorAll('.guestList__name');
+    listPriority = document.querySelectorAll('.guestList__priority');
 
     newGuest = document.getElementById('name').value;
     newGuestPriority = document.getElementById('priority').value;
@@ -19,8 +22,7 @@ buttonAddGuest.addEventListener('click', (event) => {
 
 })
 function createHtmlStructure() {
-   guest=guestTable.appendChild(document.createElement('div'))
-   console.log(guest)
+   guest=guestList.appendChild(document.createElement('div'))
 
     guest.classList.add('guest')
 
@@ -30,8 +32,8 @@ function createHtmlStructure() {
 
 }
 function addClass(name, priority) {
-    name.classList.add('guestTable__name');
-    priority.classList.add('guestTable__priority')
+    name.classList.add('guestList__name');
+    priority.classList.add('guestList__priority')
 }
 function addData(name, priority) {
     listName[listName.length - 1].textContent = name
