@@ -1,42 +1,38 @@
-var guestList = document.querySelector('.guestList');
-var buttonAddGuest = document.querySelector('.addNewGuest__button')
-var listName = document.querySelectorAll('.guestList__name')
-var listPriority = document.querySelectorAll('.guestList__priority')
+const guestList = document.querySelector('.guestList');
+const buttonAddGuest = document.querySelector('.addNewGuest__button')
+const guests = []
 
 buttonAddGuest.addEventListener('click', (event) => {
     event.preventDefault();
-    if(guestList.classList.value.includes('deactivated')){
+    if (guestList.classList.value.includes('deactivated')) {
         guestList.classList.add('activated')
     }
-
-    createHtmlStructure();
-
-    listName = document.querySelectorAll('.guestList__name');
-    listPriority = document.querySelectorAll('.guestList__priority');
-
-    newGuest = document.getElementById('name').value;
-    newGuestPriority = document.getElementById('priority').value;
-
-    addData(newGuest, newGuestPriority)
+    createGuest();
+    addGuestInHtml(newGuest);
+    btnDell=document.querySelectorAll('.btn-dell')
     document.querySelector('.addNewGuest').reset()
-
 })
-function createHtmlStructure() {
-   guest=guestList.appendChild(document.createElement('div'))
+function createGuest() {
+    newGuest = {
+        'name': document.getElementById('name').value,
+        'priority': document.getElementById('priority').value
+    }
+    guests.push(newGuest)
 
-    guest.classList.add('guest')
+    return newGuest
+}
+function addGuestInHtml(guest){
 
-    addClass
-        (guest.appendChild(document.createElement('p')),
-            guest.appendChild(document.createElement('p')))
-
+    guestList.innerHTML+=
+    `<div class='guest'>
+        <p class='guestList__name'>${newGuest.name}</p>
+        <p class='guestList__priority'>${newGuest.priority}</p>
+        <img src='./img/cross-circle.png' class='btn-dell'></img>
+    </div>`
 }
 function addClass(name, priority) {
     name.classList.add('guestList__name');
     priority.classList.add('guestList__priority')
 }
-function addData(name, priority) {
-    listName[listName.length - 1].textContent = name
-    listPriority[listPriority.length - 1].textContent = priority
-}
+
 

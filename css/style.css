@@ -84,6 +84,9 @@
     color: #ffff;
     font-weight: 800;
 }
+.btn-dell{
+    height: 16px;
+}
 @media screen and (max-width:400px) {
 
     .container {
